@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wisdom Travels & Tours</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery.fullPage.css"/>
+        <script src="vendors/jquery.easings.min.js"></script>
+        <script type="text/javascript" src="jquery.fullPage.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    scrollbar : true, 
+                });   
+                $.fn.fullpage.setResponsive(true);
+            });         
+        </script>
+        <style>
+            html,body{
+                font-family: 'Roboto Slab', serif;
+            }
+            h3,h4{
+                font-family: 'Lobster', cursive;
+            }
+            .row{
+                width: 100%;
+            }
+            .btn-floating{
+                margin-left: 50%;
+            }
+            #icons{
+                padding-top: 20%;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+            .material-icons{
+                color:#4a148c;
+            }
+            a,p.card-content{
+                text-decoration: none;
+                color: black;
+            }
+            #icons, a,p{
+                font-family: 'Roboto Slab', serif;                
+            }
+            div.row, div.row.center-align{
+                margin-left: 0px;
+            }
+            div.card.col.m4.s12.hoverable{
+                padding: 0px;
+            }
+            @media screen and (max-width: 767px) {
+                .googlemaps{
+                    max-width:  250%;
+                }
+            }
+            #packageOne,#packageTwo,#packageThree{
+                display: none;
+            }
+            .fp-controlArrow.fp-prev{
+                border-color: transparent #4a148c transparent transparent;
+            }
+            .fp-controlArrow.fp-next{
+                 border-color: transparent transparent transparent #4a148c;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="fullpage"> 
+            <section class="section valign-wrapper purple panel">   
+                <div class="row valign">
+                    <h3 class="center-align white-text">Wisdom Travels</h3>
+                    <a class="btn-floating btn-small waves-effect waves teal lighten-1 hoverable" href="#aboutme">
+                        <i class="material-icons">keyboard_arrow_down</i>
+                    </a>
+                </div>
+            </section>
+            <section class="section container valign-wrapper panel" id="aboutme">
+                <div class="row">
+                    <h4 class="center-align purple-text">Our Services</h4>
+                    <div class ="valign">
+                        <div id="icons">
+                            <div class="row center-align">
+                                <a href ="#contactus">
+                                    <div class="col s4 hoverable">
+                                        <!-- Promo Content 1 goes here -->
+                                        <i class="medium material-icons">flight</i>
+                                        <p class="promo-caption">Air Ticketing</p>
+                                    </div>
+                                </a>
+                                <a href="#contactus">
+                                    <div class="col s4 hoverable">
+                                        <!-- Promo Content 2 goes here -->
+                                        <i class="medium material-icons">hotel</i>
+                                        <p class="promo-caption" >Hotel Bookings</p>
+                                    </div>
+                                </a>
+                                <a href="#srilanka">
+                                    <div class="col s4 hoverable">
+                                        <!-- Promo Content 3 goes here -->
+                                        <i class="medium material-icons">explore</i>
+                                        <p>Inbound & Outbound Tours</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section valign-wrapper purple panel" id="srilanka">
+                <h4 class="center-align white-text">Packages</h4>
+                <div class ="container">
+                    <div class="row" style="margin:0em;">
+                        <!-- First card -->
+                        <div class="card col m4 s12 hoverable valign">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="Images/sri-lanka-explorer-31570522-1487346841-ImageGalleryLightboxLarge.jpg">
+                            </div>                  
+                            <div class="card-content" id="test1">
+                                <span class="card-title activator grey-text text-darken-4">
+                                    A Glimpse of <br>Sri Lanka
+                                </span>
+                                <p>4N/5D<br>From $2000</p>
+                            </div>
+                        <div class="card-action">                            
+                            <a href="#packageOne" id="buttonOne">More info</a>
+                        </div>
+                    </div>
+                    <div class="card col m4 s12 hoverable">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="Images/sri-lanka-wallpaper-6.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Highlights tour of Sri Lanka
+                            </span>
+                            <p>6N/7D<br>From $3500</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#packageTwo" id="buttonTwo" onclick="displayDiv1()">More info</a>
+                        </div>
+                    </div>
+                    <div class="card col m4 s12 hoverable">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="Images/Maldives1080p.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="test4">
+                                <span class="card-title activator grey-text text-darken-4">
+                                    Beach Holiday in Maldives
+                                </span>
+                                <p>4N/5D<br>From $3000</p>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <a href="#packageThree" onclick="displayDiv2()">More info</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Package One Start -->
+            <section class="section" id="packageOne" style="padding:0;">
+                <div class="slide" data-anchor="slide1">
+                    <h4 class="center-align">Airport - Pinnawala - Habarana<br>Day 1</h4>
+                    <p class="center-align">
+                        Visit to Pinnawala Elephant Orphanage<br> Overnight stay at Cinnamon Lodge, Habarana (5 Star)
+                    </p>
+                </div>
+                <div class="slide" data-anchor="slide2">
+                    <h4 class="center-align">Habarana - Matale - Kandy<br>Day 2</h4>
+                    <p class="center-align">
+                        Visit to Spice Garden, Matale<br>Batik Factory and the city of Kandy<br> Overnight stay at Hotel Chaaya Citadel, Kandy (4 Star)</p>
+                </div>
+                <div class="slide" data-anchor="slide3">
+                    <h4 class="center-align">Kandy - Nuwara Eliya<br>Day 3</h4>
+                    <p class="center-align">
+                        Visit to the Royal Botanical Gardens, Peradeniya<br>Tea plantations and then to Nuwara Eliya <br>Overnight stay at St.Andrews Hotel, Nuwara Eliya (3 Star)</p>
+                </div>
+                <div class="slide" data-anchor="slide4">
+                    <h4 class="center-align">Nuwara-Eliya - Colombo<br>Day 4</h4>
+                    <p class="center-align">
+                        After breakfast proceed to Colombo, enroute witness some scenic waterfalls.<br>Batik Factory and the city of Kandy<br> Overnight stay at Hotel Chaaya Citadel, Kandy (4 Star)</p>
+                </div>
+                <div class="slide" data-anchor="slide5">
+                    <h4 class="center-align">Colombo - Airport<br>Day 5</h4>
+                    <p class="center-align">After breakfast transfer on time to connect departure flight.</p>
+                </div>
+            </section>
+            <!-- Package One End -->
+            <!-- Package Two start -->
+            <section class="section" id="packageTwo" style="padding:0;">
+                <div class="slide" data-anchor="slide1">
+                    <h4 class="center-align">Airport - Negombo <br>Day 1</h4>
+                    <p class="center-align">
+                        Visit to Negombo, A famous fishing village North of Colombo.<br> Overnight stay at Browns Beach Hotel, Negombo (3 Star)</p>
+                </div>
+                <div class="slide" data-anchor="slide2">
+                    <h4 class="center-align">Negombo - Pinnawala - Kandy<br>Day 2</h4>
+                    <p class="center-align">
+                        Visit to Spice Garden, Matale<br>Batik Factory and the city of Kandy<br> Overnight stay at Hotel Chaaya Citadel, Kandy (4 Star)</p>
+                </div>
+                <div class="slide" data-anchor="slide3">
+                    <h4 class="center-align">Kandy Sightseeing<br>Day 3</h4>
+                    <p class="center-align">
+                        A brief city tour Kandy including visit to <br>the Upper Lake Drive<br>Market Square Arts & Crafts Center<br> The Temple of the Sacred Tooth Relic<br>Witness a Cultural dance performance featuring various dance types of Sri Lanka<br>Overnight stay at Hotel Chaaya Citadel, Kandy (4 Star)</p>
+                </div>
+                <div class="slide" data-anchor="slide4">
+                    <h4 class="center-align">Kandy - Nuwara Eliya<br>Day 4</h4>
+                    <p class="center-align">
+                        Royal Botanical Gardens<br>Tea Plantations<br>Overnight stay at St. Andrews Hotel, Nuwara Eliya (3 Star)</p>
+                </div>
+                <div class="slide" data-anchor="slide5">
+                    <h4 class="center-align">Nuwara Eliya Sightseeing<br>Day 5</h4>
+                    <p class="center-align">Visit Nuwara Eliya<br>Overnight stay at St. Andrews Hotel, Nuwara Eliya (3 Star)</p>
+                </div>
+                <div class="slide" data-anchor="slide6">
+                    <h4 class="center-align">Nuwara Eliya - Colombo<br>Day 6</h4>
+                    <p class="center-align">After breakfast proceed to Colombo, enroute witness some scenic waterfalls.<br>Visit Cinnamon Gardens<br>Fort<br>Sea Street<br>The Dewatagaha Mosque<br>Overnight stay at Galadari Hotel / Cinnamon Lakeside, Colombo (5 Star)</p>
+                </div>
+                
+                <div class="slide" data-anchor="slide7">
+                    <h4 class="center-align">Colombo - Airport<br>Day 7</h4>
+                    <p class="center-align">After breakfast transfer on time to connect departure flight.</p>
+                </div>
+            </section>          
+            <!-- Package Two End -->
+            <!-- Package Three Start -->
+            <section class="section" id="packageThree" style="padding:0;">
+                <div class="slide" data-anchor="slide1">
+                    <h4 class="center-align">Beach Holiday in Maldives<br>4 Nights/5 Days</h4>
+                    <p class="center-align">
+                        <Ul class="center-align">COST INCLUDES
+                            <li>Accommodation at a Beach Bungalow with pool on Bed & Breakfast basis</li>
+                            <li>Return airport transfers by Sea Plane</li>
+                            <li>Daily breakfast at Café Huraa</li>
+                            <li>Usage of non-motorized water sports</li>
+                            <li>Snorkeling equipment to discover the wonderful house reef</li>
+                            <li>Tennis court</li><br>
+                            COST EXCLUDES
+                            <li>Lunch & dinner on tour</li>
+                            <br>
+                            CONDITIONS
+                            <li>Cost based on Beach Bungalow with pool rooms,<br> if a higher category room is required additional supplement can be paid</li>
+                        </Ul>    
+                    </p>
+                </div>
+            </section>          
+            <section class="section panel">
+                <h4 class="center-align">Custom package?</h4>
+                <div class="container">
+                    <form class="col s12">
+                        <div class="container valign-wrapper">
+                            <div class="row valign">
+                                <p>Send us your <b>Name</b>, <b>Contact details</b>, <b>Your budget</b>, <b>Places in Sri Lanka that you would like to visit or your interests (ex. Wild life, nature, etc.)</b>, <b>The number of people joining the tour</b>, How long do you want to stay and any other details that would help us in designing an itinerary for you via email</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="section contactus purple darken-5 panel" id="contactus">
+                <div class="container">
+                    <div class="row white-text">
+                        <h4 class="center-align">Contact Us</h4>
+                        <div class="col m12 center-align">
+                            <span class="col s12"><i class="material-icons small">phone</i> +94112304280 or +9411602144538<br>
+                            <i class="material-icons small">mail</i> muneer@wisdomtravels.com</span>
+                        </div>
+                        <div class="container">
+                            <div class="col s6">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d371.43669875799606!2d79.85936296286026!3d6.921121959375474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25913170321df%3A0x933102ee90a3d99f!2sWisdom+Travels+%26+Tours+International+(Pvt)+Ltd!5e0!3m2!1sen!2slk!4v1497197926098" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="googlemaps"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+            <footer class="footer-copyright purple darken-2 center-align white-text">
+                Copyright © Wisdom Travels & Tours International (Pvt).Ltd 2000-2017. All rights reserved. <br>A site by Yoosuf Muneer.
+            </footer>
+        <script>
+            document.getElementById("buttonOne").onclick = function() {displayDiv()};
+            function displayDiv(){
+                document.getElementById("packageOne").style.display="block";   
+            }
+            function displayDiv1(){
+                document.getElementById("packageTwo").style.display="block";   
+            }
+            function displayDiv2(){
+                document.getElementById("packageThree").style.display="block";   
+            }
+        </script>
+        </div>
+    </body>
+</html>
